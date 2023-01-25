@@ -1,73 +1,66 @@
 package org.example;
-//package JavaProject;
 import java.util.Scanner;
-class Simple_Bank_Account{
-    String account_holders_name;
-    private final long account_number;
+class simpleBankAccount{
+    String accountholdersname;
+    private final long accountnumber;
     private double balance;
-    public Simple_Bank_Account(String name, long acc_number, long Balance){
-        account_holders_name=name;
-        account_number=acc_number;
-        balance=Balance;
+    public simpleBankAccount(String name, long accnumber, long baalance){
+        accountholdersname=name;
+        accountnumber=accnumber;
+        balance=baalance;
     }
-    public void deposit(long Deposit){
-        System.out.println("------------------------");
-        System.out.println("Name :"+account_holders_name);
-        System.out.println("Account_Number :"+account_number);
-        System.out.println("Before Depositing balance"+" "+balance);
-        balance=balance+Deposit;
-        System.out.println("After Depositing Balance"+" "+balance);
-        System.out.println("-------------------------------");
+    public void deposit(long deposit){
+        logger.log.println(accountholdersname);
+        logger.log.println(accountnumber);
+        logger.log.println("Before Depositing balance"+" "+balance);
+        balance=balance+deposit;
+        logger.log.println("After Depositing Balance"+" "+balance);
     }
-    public void Withdrawal(long Withdrwal_Amount){
-        System.out.println("------------------------");
-        System.out.println("Name :"+account_holders_name);
-        System.out.println("Account_Number :"+account_number);
-        System.out.println("Before Withdrawal balance"+" "+balance);
-        balance=balance-Withdrwal_Amount;
-        System.out.println("After Withdrawal Balance"+" "+balance);
-        System.out.println("------------------------");
+    public void withdrawal(long withdrwalamount){
+        logger.log.println(accountholdersname);
+        logger.log.println(accountnumber);
+        logger.log.println("Before Withdrawal balance"+" "+balance);
+        balance=balance-withdrwalamount;
+        logger.log.println("After Withdrawal Balance"+" "+balance);
     }
-    public void Acc_balance(){
-        System.out.println("------------------------");
-        System.out.println("Name :"+account_holders_name);
-        System.out.println("Account_Number :"+account_number);
-        System.out.println("Account Balance"+" "+ balance);
-        System.out.println("------------------------");
+    public void accbalance(){
+        logger.log.println(accountholdersname);
+        logger.log.println(accountnumber);
+        logger.log.println("Account Balance"+" "+ balance);
     }
 
 
     public static void main(String[] args){
         Scanner sc=new Scanner(System.in);
-        System.out.print("Account Holders Name:");
+        logger.log.print("Account Holders Name:");
         String name=sc.nextLine();
-        System.out.print("Account Number:");
-        long acc_number=sc.nextLong();
-        System.out.print("Account Holder Balance:");
-        long Balance=sc.nextLong();
-        Simple_Bank_Account acc=new Simple_Bank_Account(name,acc_number,Balance);
+        logger.log.print("Account Number:");
+        long accnumber=sc.nextLong();
+        logger.log.print("Account Holder Balance:");
+        long balance=sc.nextLong();
+        simpleBankAccount acc=new simpleBankAccount(name,accnumber,balance);
         while(true){
-            System.out.println("1.Deposit");
-            System.out.println("2.withdrwal");
-            System.out.println("3.Balance");
-            System.out.println("4.Exit");
-            System.out.println("Enter Your Choice");
-            int A=sc.nextInt();
-            if(A==1){
-                System.out.println("Enter the amount to be deposit");
-                long Deposit=sc.nextLong();
-                acc.deposit(Deposit);
+            logger.log.println("1.Deposit");
+            logger.log.println("2.withdrwal");
+            logger.log.println("3.Balance");
+            logger.log.println("4.Exit");
+            logger.log.println("Enter Your Choice");
+            int a=sc.nextInt();
+            if(a==1){
+                logger.log.println("Enter the amount to be deposit");
+                long deeposit=sc.nextLong();
+                acc.deposit(deeposit);
             }
-            else if(A==2){
-                System.out.println("Enter the amount to be withdrawal");
-                long Withdrawal_Amount=sc.nextLong();
-                acc.Withdrawal(Withdrawal_Amount);
+            else if(a==2){
+                logger.log.println("Enter the amount to be withdrawal");
+                long withdrawalAmount=sc.nextLong();
+                acc.withdrawal(withdrawalAmount);
             }
-            else if(A==3){
-                acc.Acc_balance();
+            else if(a==3){
+                acc.accbalance();
             }
             else{
-                System.out.println("Exit");
+                logger.log.println("Exit");
                 break;
             }
         }
