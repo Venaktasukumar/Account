@@ -1,10 +1,10 @@
 package org.example;
 import java.util.Scanner;
-class account{
+class Account{
     String accountholdersname;
     private final long accountnumber;
     private double balance;
-    public account(String name, long accnumber, long baalance){
+    public Account(String name, long accnumber, long baalance){
         accountholdersname=name;
         accountnumber=accnumber;
         balance=baalance;
@@ -38,7 +38,7 @@ class account{
         long accnumber=sc.nextLong();
         logger.log.print("Account Holder Balance:");
         long balance=sc.nextLong();
-        account acc=new account(name,accnumber,balance);
+        Account acc=new Account(name,accnumber,balance);
         while(true){
             logger.log.println("1.Deposit");
             logger.log.println("2.withdrwal");
