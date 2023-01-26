@@ -14,7 +14,7 @@ class Account{
         System.out.println(accountnumber);
         System.out.println("Before Depositing balance"+" "+balance);
         balance=balance+deposit;
-        System.out.println("After Depositing Balance"+" "+balance);
+        logger.log.println("After Depositing Balance"+" "+balance);
     }
     public void withdrawal(long withdrwalamount){
         System.out.println(accountholdersname);
