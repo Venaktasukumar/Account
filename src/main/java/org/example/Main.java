@@ -26,7 +26,7 @@ class Account{
     public void accbalance(){
         System.out.println(accountholdersname);
         System.out.println(accountnumber);
-        System.out.println("Account Balance"+" "+ balance);
+        System.out.println("Account Balance"+" "+balance);
     }
 
 
