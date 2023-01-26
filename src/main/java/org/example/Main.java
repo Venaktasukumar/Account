@@ -10,49 +10,49 @@ class Account{
         balance=baalance;
     }
     public void deposit(long deposit){
-        logger.log.println(accountholdersname);
-        logger.log.println(accountnumber);
-        logger.log.println("Before Depositing balance"+" "+balance);
+        System.out.println(accountholdersname);
+        System.out.println(accountnumber);
+        System.out.println("Before Depositing balance"+" "+balance);
         balance=balance+deposit;
-        logger.log.println("After Depositing Balance"+" "+balance);
+        System.out.println("After Depositing Balance"+" "+balance);
     }
     public void withdrawal(long withdrwalamount){
-        logger.log.println(accountholdersname);
-        logger.log.println(accountnumber);
-        logger.log.println("Before Withdrawal balance"+" "+balance);
+        System.out.println(accountholdersname);
+        System.out.println(accountnumber);
+        System.out.println("Before Withdrawal balance"+" "+balance);
         balance=balance-withdrwalamount;
-        logger.log.println("After Withdrawal Balance"+" "+balance);
+        System.out.println("After Withdrawal Balance"+" "+balance);
     }
     public void accbalance(){
-        logger.log.println(accountholdersname);
-        logger.log.println(accountnumber);
-        logger.log.println("Account Balance"+" "+ balance);
+        System.out.println(accountholdersname);
+        System.out.println(accountnumber);
+        System.out.println("Account Balance"+" "+ balance);
     }
 
 
     public static void main(String[] args){
         Scanner sc=new Scanner(System.in);
-        logger.log.print("Account Holders Name:");
+        System.out.print("Account Holders Name:");
         String name=sc.nextLine();
-        logger.log.print("Account Number:");
+        System.out.print("Account Number:");
         long accnumber=sc.nextLong();
-        logger.log.print("Account Holder Balance:");
+        System.out.print("Account Holder Balance:");
         long balance=sc.nextLong();
         Account acc=new Account(name,accnumber,balance);
         while(true){
-            logger.log.println("1.Deposit");
-            logger.log.println("2.withdrwal");
-            logger.log.println("3.Balance");
-            logger.log.println("4.Exit");
-            logger.log.println("Enter Your Choice");
+            System.out.println("1.Deposit");
+            System.out.println("2.withdrwal");
+            System.out.println("3.Balance");
+            System.out.println("4.Exit");
+            System.out.println("Enter Your Choice");
             int a=sc.nextInt();
             if(a==1){
-                logger.log.println("Enter the amount to be deposit");
+                System.out.println("Enter the amount to be deposit");
                 long deeposit=sc.nextLong();
                 acc.deposit(deeposit);
             }
             else if(a==2){
-                logger.log.println("Enter the amount to be withdrawal");
+                System.out.println("Enter the amount to be withdrawal");
                 long withdrawalAmount=sc.nextLong();
                 acc.withdrawal(withdrawalAmount);
             }
@@ -60,7 +60,7 @@ class Account{
                 acc.accbalance();
             }
             else{
-                logger.log.println("Exit");
+                System.out.println("Exit");
                 break;
             }
         }
