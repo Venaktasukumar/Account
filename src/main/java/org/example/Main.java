@@ -2,18 +2,16 @@ package org.example;
 import java.util.Scanner;
 import java.util.logging.*;
 class Account{
+    Logger l= Logger.getLogger("com.api.jar");
     String accountholdersname;
     private final long accountnumber;
     private double balance;
     public Account(String name, long accnumber, long baalance){
-        Logger l= Logger.getLogger("com.api.jar");
         accountholdersname=name;
         accountnumber=accnumber;
         balance=baalance;
     }
     public void deposit(long deposit){
-        Logger l= Logger.getLogger("com.api.jar");
-        l.info(accountholdersname);
         long ca=accountnumber;
         String la=""+ca;
         l.info(la);
@@ -24,7 +22,6 @@ class Account{
         l.info(lc);
     }
     public void withdrawal(long withdrwalamount){
-        Logger l= Logger.getLogger("com.api.jar");
         l.info(accountholdersname);
         long cv=accountnumber;
         String ld=""+cv;
@@ -36,7 +33,6 @@ class Account{
         l.info(lf);
     }
     public void accbalance(){
-        Logger l= Logger.getLogger("com.api.jar");
         l.info(accountholdersname);
         long cc=accountnumber;
         String lg=""+cc;
