@@ -26,8 +26,8 @@ class Account{
     public void withdrawal(long withdrwalamount){
         Logger l= Logger.getLogger("com.api.jar");
         l.info(accountholdersname);
-        long cb=accountnumber;
-        String ld=""+cb;
+        long cv=accountnumber;
+        String ld=""+cv;
         l.info(ld);
         String le="Before Withdrawal balance:"+balance;
         l.info(le);
