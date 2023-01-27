@@ -14,35 +14,46 @@ class Account{
     public void deposit(long deposit){
         Logger l= Logger.getLogger("com.api.jar");
         l.info(accountholdersname);
-        l.info(""+accountnumber));
-        l.info("Before Depositing balance"+" "+balance);
+        long ca=accountnumber;
+        String la=""+ca;
+        l.info(la);
+        String lb="Before Depositing balance:"+balance;
+        l.info(lb);
         balance=balance+deposit;
-        l.info("After Depositing Balance"+" "+balance);
+        String lc="After Depositing Balance:"+balance;
+        l.info(lc);
     }
     public void withdrawal(long withdrwalamount){
         Logger l= Logger.getLogger("com.api.jar");
         l.info(accountholdersname);
-        l.info(String.valueOf(accountnumber));
-        l.info("Before Withdrawal balance"+" "+balance);
+        long cb=accountnumber;
+        String ld=""+cb;
+        l.info(ld);
+        String le="Before Withdrawal balance:"+balance;
+        l.info(le);
         balance=balance-withdrwalamount;
-        l.info("After Withdrawal Balance"+" "+balance);
+        String lf="After Withdrawal Balance:"+balance;
+        l.info(lf);
     }
     public void accbalance(){
         Logger l= Logger.getLogger("com.api.jar");
         l.info(accountholdersname);
-        l.info(String.valueOf(accountnumber));
-        l.info("Account Balance"+" "+balance);
+        long cc=accountnumber;
+        String lg=""+cc;
+        l.info(lg);
+        String lh="Account Balance"+balance;
+        l.info(lh);
     }
 
 
     public static void main(String[] args){
         Logger l= Logger.getLogger("com.api.jar");
         Scanner sc=new Scanner(System.in);
-        System.out.print("Account Holders Name:");
+        l.info("Account Holders Name:");
         String name=sc.nextLine();
-        System.out.print("Account Number:");
+        l.info("Account Number:");
         long accnumber=sc.nextLong();
-        System.out.print("Account Holder Balance:");
+        l.info("Account Holder Balance:");
         long balance=sc.nextLong();
         Account acc=new Account(name,accnumber,balance);
         while(true){
