@@ -12,8 +12,8 @@ class Account{
         balance=baalance;
     }
     public void deposit(long deposit){
-        long ca=accountnumber;
-        String la=""+ca;
+        l.info(accountholdersname);
+        String la=""+accountnumber;
         l.info(la);
         String lb="Before Depositing balance:"+balance;
         l.info(lb);
@@ -23,8 +23,7 @@ class Account{
     }
     public void withdrawal(long withdrwalamount){
         l.info(accountholdersname);
-        long cv=accountnumber;
-        String ld=""+cv;
+        String ld=""+accountnumber;
         l.info(ld);
         String le="Before Withdrawal balance:"+balance;
         l.info(le);
@@ -34,8 +33,7 @@ class Account{
     }
     public void accbalance(){
         l.info(accountholdersname);
-        long cc=accountnumber;
-        String lg=""+cc;
+        String lg=""+accountnumber;
         l.info(lg);
         String lh="Account Balance"+balance;
         l.info(lh);
@@ -45,7 +43,6 @@ class Account{
     public static void main(String[] args){
         Logger l= Logger.getLogger("com.api.jar");
         Scanner sc=new Scanner(System.in);
-        try {
             l.info("Account Holders Name:");
             String name = sc.nextLine();
             l.info("Account Number:");
@@ -80,9 +77,5 @@ class Account{
             }
 
             sc.close();
-        }
-        catch(InputMismatchException e){
-            l.info("invalid input "+e);
-        }
     }
 }
